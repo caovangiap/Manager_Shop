@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.android_basic_manager.viewmodel.ViewModelManager" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/ToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="Admin storage" />
+
+        <TextView
+            android:id="@+id/Today"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ToolBar"
+            app:layout_constraintVertical_bias="0.05"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/Order"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background= "@drawable/border_funticion"
+            app:layout_constraintTop_toBottomOf="@id/Today"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.14"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintVertical_bias="0.05"
+            app:layout_constraintWidth_percent="0.9"
+            android:elevation="1dp"
+            >
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:elevation="1dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/additems"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHeight_percent="0.7"
+                app:layout_constraintHorizontal_bias="0.053"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.6"
+                app:layout_constraintWidth_percent="0.2" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="@string/order"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHeight_percent="0.4"
+                app:layout_constraintHorizontal_bias="0.531"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.06"
+                app:layout_constraintWidth_percent="0.5" />
+
+            <TextView
+                android:id="@+id/totalOrder"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:textColor="#E53935"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHeight_percent="0.3"
+                app:layout_constraintHorizontal_bias="0.449"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.786"
+                app:layout_constraintWidth_percent="0.4" />
+
+            <TextView
+                android:id="@+id/completeOrder"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:textColor="#E53935"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHeight_percent="0.3"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.786"
+                app:layout_constraintWidth_percent="0.3"
+
+                />
+
+            <Button
+                android:id="@+id/clickOrder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#00000000"
+                android:elevation="5dp"
+                android:onClick="@{()->viewModel.clickOrder()}"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/AddItems"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background= "@drawable/border_funticion"
+            app:layout_constraintTop_toBottomOf="@id/Order"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.14"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintVertical_bias="0.05"
+            app:layout_constraintWidth_percent="0.9"
+            >
+
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:elevation="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/order"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHeight_percent="0.7"
+                app:layout_constraintHorizontal_bias="0.053"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.6"
+                app:layout_constraintWidth_percent="0.2" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="@string/add_items"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHeight_percent="0.4"
+                app:layout_constraintHorizontal_bias="0.572"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.507"
+                app:layout_constraintWidth_percent="0.5" />
+
+            <Button
+                android:id="@+id/clickAddItems"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#00000000"
+                android:elevation="5dp"
+                android:onClick="@{()->viewModel.clickAddItems()}"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/EditItems"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background= "@drawable/border_funticion"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/AddItems"
+            app:layout_constraintHeight_percent="0.14"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintVertical_bias="0.1"
+            app:layout_constraintWidth_percent="0.9" >
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:elevation="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_edit"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHeight_percent="0.7"
+                app:layout_constraintHorizontal_bias="0.053"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.6"
+                app:layout_constraintWidth_percent="0.2" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="@string/edit_items"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHeight_percent="0.4"
+                app:layout_constraintHorizontal_bias="0.572"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.507"
+                app:layout_constraintWidth_percent="0.5" />
+            <Button
+                android:id="@+id/clickEditItems"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#00000000"
+                android:elevation="5dp"
+                android:onClick="@{()->viewModel.clickEditItems()}"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/BoxChat"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/EditItems"
+            android:background= "@drawable/border_funticion"
+            app:layout_constraintHeight_percent="0.14"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintVertical_bias="0.15"
+            app:layout_constraintWidth_percent="0.9" >
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:elevation="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_boxchat"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHeight_percent="0.7"
+                app:layout_constraintHorizontal_bias="0.053"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.6"
+                app:layout_constraintWidth_percent="0.2" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="@string/response_of_client"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHeight_percent="0.4"
+                app:layout_constraintHorizontal_bias="0.941"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.507"
+                app:layout_constraintWidth_percent="0.7" />
+            <Button
+                android:id="@+id/clickRespont"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#00000000"
+                android:elevation="5dp"
+                android:onClick="@{()->viewModel.clickRespont()}"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

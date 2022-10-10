@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Android_Basic_Manager/app/src/main/res/drawable/blackgroundlogin.xml" value="0.164" />
+        <entry key="..\:/Android_Basic_Manager/app/src/main/res/drawable/border.xml" value="0.164" />
+        <entry key="..\:/Android_Basic_Manager/app/src/main/res/drawable/border_button.xml" value="0.164" />
+        <entry key="..\:/Android_Basic_Manager/app/src/main/res/drawable/border_funticion.xml" value="0.164" />
+        <entry key="..\:/Android_Basic_Manager/app/src/main/res/drawable/border_items_information.xml" value="0.136" />
+        <entry key="..\:/Android_Basic_Manager/app/src/main/res/drawable/ic_baseline_cancel_24.xml" value="0.1675" />
+        <entry key="..\:/Android_Basic_Manager/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.164" />
+        <entry key="..\:/Android_Basic_Manager/app/src/main/res/layout/activity_main.xml" value="0.21240942028985507" />
+        <entry key="..\:/Android_Basic_Manager/app/src/main/res/layout/f.xml" value="0.24818840579710144" />
+        <entry key="..\:/Android_Basic_Manager/app/src/main/res/layout/fragment_detail_items.xml" value="0.264" />
+        <entry key="..\:/Android_Basic_Manager/app/src/main/res/layout/fragment_funcition_order.xml" value="0.24818840579710144" />
+        <entry key="..\:/Android_Basic_Manager/app/src/main/res/layout/fragment_login.xml" value="0.24818840579710144" />
+        <entry key="..\:/Android_Basic_Manager/app/src/main/res/layout/fragment_manager.xml" value="0.264" />
+        <entry key="..\:/Android_Basic_Manager/app/src/main/res/layout/fragment_order.xml" value="0.1984375" />
+        <entry key="..\:/Android_Basic_Manager/app/src/main/res/layout/fragment_order_complete.xml" value="0.264" />
+        <entry key="..\:/Android_Basic_Manager/app/src/main/res/layout/items_detail_order.xml" value="0.1774262505344164" />
+        <entry key="..\:/Android_Basic_Manager/app/src/main/res/layout/items_information.xml" value="0.264" />
+        <entry key="..\:/Android_Basic_Manager/app/src/main/res/menu/alltoolbar.xml" value="0.1984375" />
+        <entry key="..\:/Android_Basic_Manager/app/src/main/res/menu/toolbar.xml" value="0.1984375" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

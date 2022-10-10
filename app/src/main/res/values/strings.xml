@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Android_Basic _Manager</string>
+    <string name="ng_nh_p">Đăng Nhập</string>
+    <string name="savepass">SavePass</string>
+    <string name="wellcome_admin">Wellcome Admin</string>
+    <string name="t_n_ng_nh_p">Tên Đăng Nhập</string>
+    <string name="m_t_kh_u">Mật Khẩu</string>
+    <string name="start">Start</string>
+    <string name="order">Order</string>
+    <string name="add_items">Add Items</string>
+    <string name="response_of_client">Response of client</string>
+    <string name="edit_items">Edit Items</string>
+    <string name="complete">Tình Trạng</string>
+    <string name="access_order">Access Order</string>
+</resources>

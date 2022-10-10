@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.android_basic_manager.viewmodel.ViewModelLogin" />
+    </data>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:weightSum="4"
+        android:background="@color/black"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="48dp"
+                android:layout_marginRight="48dp"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wellcome_admin"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="">
+
+                </TextView>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:background="@drawable/blackgroundlogin"
+            android:layout_weight="3.1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="26sp"
+                android:layout_marginTop="36dp"
+                android:layout_marginStart="48dp"
+                android:text="@string/ng_nh_p"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/TextName"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="244dp"
+                    android:text="@string/t_n_ng_nh_p"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHeight_percent="0.09"
+                    app:layout_constraintHorizontal_bias="0.469"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintVertical_bias="0.1"
+                    android:layout_marginStart="10dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layouName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/TextName"
+                    app:layout_constraintVertical_bias="0.1"
+                    app:layout_constraintWidth_percent="0.95"
+                    android:hint="nhập tên đăng nhập admin"
+                    tools:ignore="HardcodedText"
+                    app:helperText="@{viewModel.helpName}"
+                    app:helperTextTextColor="#D32F2F"
+                    >
+
+                    <EditText
+                        android:id="@+id/inputName"
+                        android:layout_width="match_parent"
+                        android:layout_height="41.19dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="@={viewModel.inputName}"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHeight_percent="0.09"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layouName"
+                    app:layout_constraintVertical_bias="0.155"
+                    android:text="@string/m_t_kh_u"
+                    android:id="@+id/textPass"
+                    android:layout_marginStart="10dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/layoutPass"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textPass"
+                    app:layout_constraintVertical_bias="0.1"
+                    app:layout_constraintWidth_percent="0.95"
+                    android:hint="nhập pass word"
+                    tools:ignore="HardcodedText"
+                    app:helperText="@{viewModel.helpPass}"
+                    app:helperTextTextColor="#D32F2F"
+                    >
+
+                    <EditText
+                        android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="41.19dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="@={viewModel.inputPass}"
+                        />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:id="@+id/SingIn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintWidth_percent="0.5"
+                    app:layout_constraintHeight_percent="0.15"
+                    app:layout_constraintVertical_bias="1"
+                    android:background="@drawable/border_button"
+                    android:text="@string/start"
+                    android:onClick="@{()->viewModel.login()}"
+                    />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>
