@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.android_basic_manager.ulis.StorageLogin
+import com.example.android_basic_manager.view.addItems.FragmentAddItems
 import com.example.android_basic_manager.view.allmanager.FragmentManager
 import com.example.android_basic_manager.view.login.Login
 import com.example.android_basic_manager.view.order.FragmentDetaillOrder
@@ -75,7 +76,10 @@ class MainActivity : AppCompatActivity() {
                     manager.commit()
                 }
                 "Additems"->{
-
+                    val manager = supportFragmentManager.beginTransaction()
+                    val fragment = FragmentAddItems()
+                    manager.replace(R.id.VIew,fragment)
+                    manager.commit()
                 }
                 "EditItems"->{
 

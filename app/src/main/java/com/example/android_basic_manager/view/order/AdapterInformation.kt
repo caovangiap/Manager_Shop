@@ -1,6 +1,7 @@
 package com.example.android_basic_manager.view.order
 
 import android.annotation.SuppressLint
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup

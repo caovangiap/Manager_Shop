@@ -75,7 +75,7 @@
         android:layout_marginLeft="236dp"
         android:gravity="left"
         android:textColor="@color/black"
-        android:textSize="13sp"
+        android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHeight_percent="0.2"
         app:layout_constraintLeft_toLeftOf="parent"

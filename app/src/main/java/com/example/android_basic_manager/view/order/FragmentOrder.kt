@@ -18,7 +18,6 @@ class FragmentOrder : Fragment() {
     lateinit var binding: FragmentOrderBinding
     lateinit var mView: View
     lateinit var viewModel: ViewModelOrder
-    var positionDataItems :Int? = null
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -47,7 +46,6 @@ class FragmentOrder : Fragment() {
                     override fun itemsOrder(position: Int) {
                         viewModel.nextAction.postValue("Detail Order")
                         viewModel.itemsInformation.postValue(it.get(position))
-                        positionDataItems = position
 
                         // lay ra chi tiet don hang cua user thong qua document id
                         viewModel.getDataItems(viewModel.listDataId[position])
