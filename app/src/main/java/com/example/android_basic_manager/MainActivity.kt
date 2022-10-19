@@ -10,6 +10,7 @@ import com.example.android_basic_manager.view.login.Login
 import com.example.android_basic_manager.view.order.FragmentDetaillOrder
 import com.example.android_basic_manager.view.order.FragmentFuncitionOrder
 import com.example.android_basic_manager.view.order.FragmentOrder
+import com.example.android_basic_manager.viewmodel.ViewModelAddItems
 import com.example.android_basic_manager.viewmodel.ViewModelLogin
 import com.example.android_basic_manager.viewmodel.ViewModelManager
 import com.example.android_basic_manager.viewmodel.ViewModelOrder
@@ -20,13 +21,14 @@ class MainActivity : AppCompatActivity() {
         lateinit var vMLogin : ViewModelLogin
         lateinit var mVManager : ViewModelManager
         lateinit var mVOrder : ViewModelOrder
+        lateinit var vMAddItems : ViewModelAddItems
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         ApplicationContext = this
-
+        vMAddItems = ViewModelAddItems()
         vMLogin = ViewModelLogin()
         mVManager = ViewModelManager()
         mVOrder = ViewModelOrder()
@@ -75,7 +77,7 @@ class MainActivity : AppCompatActivity() {
                     manager.replace(R.id.VIew,fragment)
                     manager.commit()
                 }
-                "Additems"->{
+                "AddItems"->{
                     val manager = supportFragmentManager.beginTransaction()
                     val fragment = FragmentAddItems()
                     manager.replace(R.id.VIew,fragment)
