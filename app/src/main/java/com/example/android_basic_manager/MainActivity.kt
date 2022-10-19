@@ -49,6 +49,8 @@ class MainActivity : AppCompatActivity() {
         fManager()
         // order
         fOrder()
+        // add items
+        fAddItems()
     }
 
     // login
@@ -124,8 +126,18 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
-
+    fun fAddItems(){
+        vMAddItems.nextAction.observe(this){
+            when(it){
+                "Manager"->{
+                    val manager = supportFragmentManager.beginTransaction()
+                    val fragment = FragmentManager()
+                    manager.replace(R.id.VIew,fragment)
+                    manager.commit()
+                }
+            }
+        }
+    }
 
 
 }
