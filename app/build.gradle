@@ -79,4 +79,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-database-ktx'
     implementation 'com.google.firebase:firebase-firestore-ktx'
     implementation 'com.google.firebase:firebase-storage-ktx:20.1.0'
+
+    // dosindicator
+    implementation 'me.relex:circleindicator:2.1.6'
+    implementation 'com.tbuonomo:dotsindicator:4.2'
 }

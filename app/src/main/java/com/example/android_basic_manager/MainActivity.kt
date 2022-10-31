@@ -3,13 +3,17 @@ package com.example.android_basic_manager
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.android_basic_manager.viewmodel.ViewModelRespontClient
 import com.example.android_basic_manager.ulis.StorageLogin
 import com.example.android_basic_manager.view.addItems.FragmentAddItems
 import com.example.android_basic_manager.view.allmanager.FragmentManager
+import com.example.android_basic_manager.view.edit_items.EditItems
+import com.example.android_basic_manager.view.edit_items.FragmentEdit
 import com.example.android_basic_manager.view.login.Login
 import com.example.android_basic_manager.view.order.FragmentDetaillOrder
 import com.example.android_basic_manager.view.order.FragmentFuncitionOrder
-import com.example.android_basic_manager.view.order.FragmentOrder
+import com.example.android_basic_manager.view.respone_client.FragmentResponeItems
+import com.example.android_basic_manager.view.respone_client.RespontClient
 import com.example.android_basic_manager.viewmodel.ViewModelAddItems
 import com.example.android_basic_manager.viewmodel.ViewModelLogin
 import com.example.android_basic_manager.viewmodel.ViewModelManager
@@ -22,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         lateinit var mVManager : ViewModelManager
         lateinit var mVOrder : ViewModelOrder
         lateinit var vMAddItems : ViewModelAddItems
+        lateinit var vMResponse : ViewModelRespontClient
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,6 +37,7 @@ class MainActivity : AppCompatActivity() {
         vMLogin = ViewModelLogin()
         mVManager = ViewModelManager()
         mVOrder = ViewModelOrder()
+        vMResponse = ViewModelRespontClient()
         ManagerActiity()
     }
 
@@ -51,6 +57,8 @@ class MainActivity : AppCompatActivity() {
         fOrder()
         // add items
         fAddItems()
+        // respone
+        fResponse()
     }
 
     // login
@@ -86,7 +94,10 @@ class MainActivity : AppCompatActivity() {
                     manager.commit()
                 }
                 "EditItems"->{
-
+                    val manager = supportFragmentManager.beginTransaction()
+                    val fragment = EditItems()
+                    manager.replace(R.id.VIew,fragment)
+                    manager.commit()
                 }
                 "Order"->{
                     val manager = supportFragmentManager.beginTransaction()
@@ -95,7 +106,10 @@ class MainActivity : AppCompatActivity() {
                     manager.commit()
                 }
                 "Response"->{
-
+                    val manager = supportFragmentManager.beginTransaction()
+                    val fragment = RespontClient()
+                    manager.replace(R.id.VIew,fragment)
+                    manager.commit()
                 }
             }
         }
@@ -135,9 +149,42 @@ class MainActivity : AppCompatActivity() {
                     manager.replace(R.id.VIew,fragment)
                     manager.commit()
                 }
+                "DetailShoe"->{
+                    val manager = supportFragmentManager.beginTransaction()
+                    val fragment = FragmentEdit()
+                    manager.addToBackStack(null)
+                    manager.replace(R.id.VIew,fragment)
+                    manager.commit()
+                }
+
+
             }
         }
     }
 
-
+    fun fResponse(){
+        vMResponse.nextAction.observe(this){
+            when(it){
+                "Manager"->{
+                    val manager = supportFragmentManager.beginTransaction()
+                    val fragment = FragmentManager()
+                    manager.replace(R.id.VIew,fragment)
+                    manager.commit()
+                }
+                "Detail"->{
+                    val manager = supportFragmentManager.beginTransaction()
+                    val fragment = FragmentResponeItems()
+                    manager.replace(R.id.VIew,fragment)
+                    manager.commit()
+                }
+                "Response"->{
+                    val manager = supportFragmentManager.beginTransaction()
+                    val fragment = FragmentResponeItems()
+                    manager.addToBackStack(null)
+                    manager.replace(R.id.VIew,fragment)
+                    manager.commit()
+                }
+            }
+        }
+    }
 }

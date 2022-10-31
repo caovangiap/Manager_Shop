@@ -25,14 +25,22 @@ class ViewModelAddItems : ViewModel() {
     val accessoryItems = mutableListOf<AccessoryData>()
 
     // live data
-     val liveShoe = MutableLiveData<MutableList<DataShoe>>()
+    val liveShoe = MutableLiveData<MutableList<DataShoe>>()
     val liveAccessoryData = MutableLiveData<MutableList<AccessoryData>>()
 
+    // document gửi dữ liệu firebase
+    var docName = mutableListOf<String>()
+    var docNameItems: String? = null
     val db = Firebase.firestore
 
 
+    // value cua man edit
+    val nameProduct = MutableLiveData<String?>()
+    val priceProduct = MutableLiveData<String?>()
+    val ImageProduct = MutableLiveData<String?>()
+
     // check thong tin dau vao và up data sản pham
-    fun allProduct(){
+    fun allProduct() {
         shoeItems.clear()
         accessoryItems.clear()
         // lấy data từ firebase về
@@ -69,5 +77,18 @@ class ViewModelAddItems : ViewModel() {
             }
     }
 
+    fun dataItemsShoe(dataItems: DataShoe, document: String) {
+        nameProduct.value = dataItems.Name
+        priceProduct.value = dataItems.Price
+        ImageProduct.value = dataItems.Image.URL1.IG1
+        docNameItems = document
+    }
+
+    fun dataItemsAccessory(dataItems: AccessoryData, document: String) {
+        nameProduct.value = dataItems.Name
+        priceProduct.value = dataItems.Price
+        ImageProduct.value = dataItems.Image
+        docNameItems = document
+    }
 
 }
