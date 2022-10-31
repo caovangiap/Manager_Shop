@@ -146,6 +146,7 @@ class ViewModelOrder : ViewModel() {
                     Log.d("test2",doc.toString())
                 }
             }
+
     }
     // lay data orderComplate
     fun getdataComplete() {
@@ -191,6 +192,4 @@ class ViewModelOrder : ViewModel() {
                 Log.d("test", "Error getting documents: ", exception)
             }
     }
-
-
 }

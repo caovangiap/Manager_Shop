@@ -57,6 +57,7 @@
         >
         <EditText
             android:id="@+id/inputprice"
+            android:inputType="number"
             android:layout_width="match_parent"
             android:layout_height="41.19dp"
             tools:layout_editor_absoluteX="18dp"
@@ -88,6 +89,76 @@
             />
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/CheckShoe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/shoe"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.106"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Time"
+        app:layout_constraintVertical_bias="0.052"
+        android:textColorHint="@color/black"
+        />
+
+    <CheckBox
+        android:id="@+id/CheckAccessory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/accessory"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.792"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Time"
+        app:layout_constraintVertical_bias="0.052"
+        android:textColorHint="@color/black"
+        />
+
+    <Button
+        android:id="@+id/selecimage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/image"
+        android:backgroundTint="#F43E3E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CheckShoe"
+        app:layout_constraintVertical_bias="0.403"
+        app:layout_constraintWidth_percent="0.2" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toRightOf="@id/selecimage"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CheckAccessory"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.4"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintVertical_bias="0.2"
+        />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/putdata"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_percent="0.6"
+        app:layout_constraintHeight_percent="0.05"
+        android:background="@drawable/border_button"
+        android:text="@string/put_data"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

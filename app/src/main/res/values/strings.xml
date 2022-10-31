@@ -12,4 +12,7 @@
     <string name="edit_items">Edit Items</string>
     <string name="complete">Tình Trạng</string>
     <string name="access_order">Access Order</string>
+    <string name="shoe">Shoe</string>
+    <string name="accessory">Accessory</string>
+    <string name="put_data">Put Data</string>
 </resources>
